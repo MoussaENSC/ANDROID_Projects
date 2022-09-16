@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click For Info"
+        android:layout_toLeftOf="@id/btnDone"
+        android:layout_below="@id/edtHeight"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold To Delete"
+        android:layout_toRightOf="@id/btnDone"
+        android:layout_below="@id/edtHeight"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"/>
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp"
+    android:text="@string/welcomeMsg"
+    android:textAlignment="center"
+    android:textColor="@color/black"
+    android:textSize="25sp"
+    android:textStyle="bold"
+    android:id="@+id/txtWelcome"
+    />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWelcome"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints="name"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:id="@+id/edtAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtWelcome"
+        android:layout_toEndOf="@+id/edtName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="40dp"
+        android:autofillHints=""
+        android:hint="@string/age"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radGen"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/weight_kg"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:id="@+id/edtWeight"
+        android:importantForAutofill="no"
+        android:inputType="" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtWeight"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/height_cm"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:id="@+id/edtHeight"
+        android:importantForAutofill="no"
+        android:inputType="" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/edtAge"
+        android:orientation="horizontal"
+        android:id="@+id/radGen">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:id="@+id/radMale"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:id="@+id/radFemale"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtHeight"
+        android:layout_centerHorizontal="true"
+        android:text="@string/done"
+        android:id="@+id/btnDone"/>
+
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnDone"
+        android:id="@+id/lvUser"
+        />
+
+</RelativeLayout>
